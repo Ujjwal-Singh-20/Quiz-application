@@ -1,225 +1,245 @@
 document.addEventListener('DOMContentLoaded', function() {
     const quizData = [
         {
-            question: "What is the capital of France?",
-            options: ["Paris", "London", "Berlin", "Madrid"],
-            answer: "Paris"
+            question: "The Earth is flat.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
-            question: "What is 2 + 2?",
-            options: ["3", "4", "5", "6"],
+            question: "What is the square root of 16?",
+            type: "multiple-choice",
+            options: ["2", "4", "6", "8"],
             answer: "4"
         },
         {
+            question: "Water freezes at 0 degrees Celsius.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
+            question: "The chemical symbol for gold is Au.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
             question: "Which planet is known as the Red Planet?",
+            type: "multiple-choice",
             options: ["Venus", "Mars", "Jupiter", "Saturn"],
             answer: "Mars"
         },
         {
-            question: "Who developed the theory of relativity?",
-            options: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"],
-            answer: "Albert Einstein"
+            question: "Humans have four lungs.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
-            question: "What is the only mammal capable of true flight?",
-            options: ["Flying squirrel", "Bat", "Ostrich", "Penguin"],
-            answer: "Bat"
+            question: "What is the capital of Australia?",
+            type: "multiple-choice",
+            options: ["Sydney", "Melbourne", "Brisbane", "Canberra"],
+            answer: "Canberra"
         },
         {
-            question: "Which element is a liquid at room temperature?",
-            options: ["Mercury", "Iron", "Gold", "Sodium"],
-            answer: "Mercury"
+            question: "Light travels faster than sound.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
         },
         {
             question: "Which planet has the most moons?",
+            type: "multiple-choice",
             options: ["Earth", "Mars", "Jupiter", "Saturn"],
             answer: "Jupiter"
         },
         {
-            question: "What is the powerhouse of the cell?",
-            options: ["Nucleus", "Ribosome", "Mitochondria", "Golgi apparatus"],
-            answer: "Mitochondria"
-        },
-        {
-            question: "Which country is both in Europe and Asia?",
-            options: ["Russia", "Turkey", "Greece", "Ukraine"],
-            answer: "Turkey"
-        },
-        {
-            question: "What is the longest bone in the human body?",
-            options: ["Femur", "Tibia", "Humerus", "Fibula"],
-            answer: "Femur"
-        },
-        {
-            question: "Which organ is responsible for pumping blood throughout the body?",
-            options: ["Lungs", "Liver", "Kidneys", "Heart"],
-            answer: "Heart"
-        },
-        {
-            question: "Which ocean is the largest by surface area?",
-            options: ["Atlantic", "Indian", "Arctic", "Pacific"],
-            answer: "Pacific"
-        },
-        {
-            question: "Which element is known for its use in pencils?",
-            options: ["Lead", "Carbon", "Graphite", "Silicon"],
-            answer: "Graphite"
-        },
-        {
-            question: "What is the hardest natural substance on Earth?",
-            options: ["Gold", "Iron", "Diamond", "Silver"],
-            answer: "Diamond"
-        },
-        {
-            question: "Which country is known as the Land of the Rising Sun?",
-            options: ["China", "Japan", "South Korea", "Thailand"],
-            answer: "Japan"
-        },
-        {
-            question: "What is the largest internal organ in the human body?",
-            options: ["Heart", "Liver", "Lung", "Kidney"],
-            answer: "Liver"
-        },
-        {
-            question: "Which planet is closest to the sun?",
-            options: ["Earth", "Venus", "Mercury", "Mars"],
-            answer: "Mercury"
-        },
-        {
-            question: "What is the rarest blood type?",
-            options: ["A", "B", "AB", "O"],
-            answer: "AB"
-        },
-        {
-            question: "Which continent has the most countries?",
-            options: ["Asia", "Africa", "Europe", "South America"],
-            answer: "Africa"
-        },
-        {
-            question: "Which gas is most abundant in the Earth's atmosphere?",
-            options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"],
-            answer: "Nitrogen"
-        },
-        {
-            question: "Which famous ship sank on its maiden voyage in 1912?",
-            options: ["Lusitania", "Titanic", "Bismarck", "Queen Mary"],
-            answer: "Titanic"
-        },
-        {
-            question: "Which planet is known for its rings?",
-            options: ["Venus", "Mars", "Saturn", "Neptune"],
-            answer: "Saturn"
-        },
-        {
-            question: "What is the capital of France?",
-            options: ["Paris", "London", "Berlin", "Madrid"],
-            answer: "Paris"
-        },
-        {
-            question: "What is the largest planet in our solar system?",
-            options: ["Earth", "Mars", "Jupiter", "Saturn"],
-            answer: "Jupiter"
+            question: "The Great Wall of China is visible from space.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
             question: "Who wrote 'To Kill a Mockingbird'?",
+            type: "multiple-choice",
             options: ["Harper Lee", "J.K. Rowling", "Ernest Hemingway", "Mark Twain"],
             answer: "Harper Lee"
         },
         {
-            question: "What is the smallest prime number?",
-            options: ["1", "2", "3", "5"],
-            answer: "2"
+            question: "Bananas grow on trees.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
             question: "What is the chemical symbol for water?",
+            type: "multiple-choice",
             options: ["O2", "H2O", "CO2", "HO2"],
             answer: "H2O"
         },
         {
-            question: "In what year did the Titanic sink?",
-            options: ["1912", "1905", "1915", "1920"],
-            answer: "1912"
-        },
-        {
-            question: "Which element has the atomic number 1?",
-            options: ["Helium", "Hydrogen", "Oxygen", "Carbon"],
-            answer: "Hydrogen"
+            question: "The Eiffel Tower is located in London.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
             question: "What is the hardest natural substance on Earth?",
-            options: ["Gold", "Iron", "Diamond", "Platinum"],
+            type: "multiple-choice",
+            options: ["Gold", "Iron", "Diamond", "Silver"],
             answer: "Diamond"
         },
         {
+            question: "The sun is a star.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
+            question: "What is the largest ocean on Earth?",
+            type: "multiple-choice",
+            options: ["Atlantic", "Indian", "Arctic", "Pacific"],
+            answer: "Pacific"
+        },
+        {
+            question: "Venus is the hottest planet in our solar system.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
+            question: "What is the capital of Japan?",
+            type: "multiple-choice",
+            options: ["Tokyo", "Beijing", "Seoul", "Bangkok"],
+            answer: "Tokyo"
+        },
+        {
+            question: "Sharks are mammals.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
+        },
+        {
+            question: "What is the smallest prime number?",
+            type: "multiple-choice",
+            options: ["1", "2", "3", "5"],
+            answer: "2"
+        },
+        {
+            question: "The chemical symbol for iron is Fe.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
             question: "Who painted the Mona Lisa?",
-            options: ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Claude Monet"],
+            type: "multiple-choice",
+            options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
             answer: "Leonardo da Vinci"
         },
         {
-            question: "Which planet is known as the Red Planet?",
-            options: ["Venus", "Earth", "Mars", "Mercury"],
-            answer: "Mars"
+            question: "The human body has four kidneys.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
-            question: "What is the main language spoken in Brazil?",
-            options: ["Spanish", "Portuguese", "French", "English"],
-            answer: "Portuguese"
+            question: "What is the longest river in the world?",
+            type: "multiple-choice",
+            options: ["Amazon", "Nile", "Yangtze", "Mississippi"],
+            answer: "Nile"
         },
         {
-            question: "What is the currency of Japan?",
-            options: ["Yuan", "Won", "Yen", "Ringgit"],
-            answer: "Yen"
+            question: "Birds are the only animals with feathers.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
         },
         {
-            question: "Who is known as the 'Father of Computers'?",
-            options: ["Alan Turing", "Charles Babbage", "Ada Lovelace", "John von Neumann"],
-            answer: "Charles Babbage"
+            question: "What is the smallest country in the world?",
+            type: "multiple-choice",
+            options: ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
+            answer: "Vatican City"
         },
         {
-            question: "Which ocean is the largest?",
-            options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
-            answer: "Pacific Ocean"
+            question: "The atomic number of carbon is 6.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
         },
         {
-            question: "What is the capital city of Canada?",
-            options: ["Toronto", "Vancouver", "Montreal", "Ottawa"],
+            question: "Who was the first president of the United States?",
+            type: "multiple-choice",
+            options: ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"],
+            answer: "George Washington"
+        },
+        {
+            question: "The boiling point of water is 100 degrees Celsius.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
+        },
+        {
+            question: "What is the capital of Canada?",
+            type: "multiple-choice",
+            options: ["Toronto", "Vancouver", "Ottawa", "Montreal"],
             answer: "Ottawa"
         },
         {
-            question: "What is the tallest mountain in the world?",
-            options: ["K2", "Mount Everest", "Kangchenjunga", "Lhotse"],
-            answer: "Mount Everest"
+            question: "Lightning never strikes the same place twice.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
         },
         {
-            question: "In which year did the Berlin Wall fall?",
-            options: ["1989", "1990", "1987", "1991"],
-            answer: "1989"
+            question: "Which organ is responsible for pumping blood throughout the body?",
+            type: "multiple-choice",
+            options: ["Lungs", "Liver", "Kidneys", "Heart"],
+            answer: "Heart"
         },
         {
-            question: "Which planet is known for its rings?",
-            options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
-            answer: "Saturn"
+            question: "The Great Wall of China is over 13,000 miles long.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
         },
         {
-            question: "What is the chemical symbol for gold?",
-            options: ["Au", "Ag", "Pb", "Fe"],
-            answer: "Au"
+            question: "Which country is known as the Land of the Rising Sun?",
+            type: "multiple-choice",
+            options: ["China", "Japan", "South Korea", "Thailand"],
+            answer: "Japan"
         },
         {
-            question: "Who discovered penicillin?",
-            options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Gregor Mendel"],
-            answer: "Alexander Fleming"
+            question: "The speed of light is faster than the speed of sound.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "True"
         },
         {
-            question: "What is the capital of Australia?",
-            options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
-            answer: "Canberra"
+            question: "Which country is the largest by area?",
+            type: "multiple-choice",
+            options: ["Canada", "China", "Russia", "United States"],
+            answer: "Russia"
         },
         {
-            question: "Which famous scientist developed the theory of relativity?",
-            options: ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Galileo Galilei"],
-            answer: "Albert Einstein"
-        }       
+            question: "Humans and dinosaurs lived at the same time.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
+        },
+        {
+            question: "Which planet is closest to the sun?",
+            type: "multiple-choice",
+            options: ["Earth", "Venus", "Mercury", "Mars"],
+            answer: "Mercury"
+        },
+        {
+            question: "Bats are blind.",
+            type: "true-false",
+            options: ["True", "False"],
+            answer: "False"
+        }
     ];
 
     const quizContainer = document.getElementById('quiz-container');
@@ -279,4 +299,3 @@ document.addEventListener('DOMContentLoaded', function() {
         resultsContainer.textContent = `You scored ${previousScore} out of ${quizData.length}`;
     }
 });
-
