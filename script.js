@@ -1,3 +1,4 @@
+// quiz_app/static/script.js
 document.addEventListener('DOMContentLoaded', function() {
     const quizData = [
         {
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             options: ["3", "4", "5", "6"],
             answer: "4"
         }
-        // Adding more questions afterwards
+        // Add more questions as needed
     ];
 
     const quizContainer = document.getElementById('quiz-container');
@@ -37,5 +38,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         quizContainer.appendChild(questionDiv);
+    });
+
+    const submitButton = document.getElementById('submit-quiz');
+    submitButton.addEventListener('click', function() {
+        let score = 0;
+        quizData.forEach((q, index) => {
+            const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+            if (selectedOption && selectedOption.value === q.answer) {
+                score++;
+            }
+        });
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.textContent = `You scored ${score} out of ${quizData.length}`;
     });
 });
