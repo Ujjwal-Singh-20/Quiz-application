@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const optionLabel = document.createElement('label');
             const optionInput = document.createElement('input');
             optionInput.type = 'radio';
-            optionInput.name = `question${index}`;
+            optionInput.name = `question${index+1}`;
             optionInput.value = option;
 
             optionLabel.appendChild(optionInput);
@@ -259,5 +259,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const resultsContainer = document.getElementById('results');
         resultsContainer.textContent = `You scored ${score} out of ${quizData.length}`;
+    });
+
+    const resetButton = document.getElementById('reset-quiz');
+    resetButton.addEventListener('click', function() {
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.checked = false;
+        });
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.textContent = '';
     });
 });
