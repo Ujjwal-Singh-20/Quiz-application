@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const optionLabel = document.createElement('label');
             const optionInput = document.createElement('input');
             optionInput.type = 'radio';
-            optionInput.name = `question${index+1}`;
+            optionInput.name = `question${index}`;
             optionInput.value = option;
 
             optionLabel.appendChild(optionInput);
