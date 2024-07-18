@@ -2,23 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="static/script.js" defer></script>
 </head>
 <body>
-    <div class="todo-container">
-        <h1>To-Do List</h1>
-        <input type="text" id="new-todo" placeholder="Add a new task...">
-        <button onclick="addTodo()">Add</button>
-        <ul id="todo-list"></ul>
-    </div>
-    <div>
-        <button onclick="filterTodos('all')">All</button>
-        <button onclick="filterTodos('completed')">Completed</button>
-        <button onclick="filterTodos('active')">Active</button>
-    </div>
-    
-    <script src="script.js"></script>
+    <h1>Quiz Application</h1>
+    <div id="quiz-container"></div>
+    <button id="submit-quiz">Submit Quiz</button>
+    <div id="results"></div>
 </body>
 </html>
+
