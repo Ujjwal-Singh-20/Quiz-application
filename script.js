@@ -259,6 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const resultsContainer = document.getElementById('results');
         resultsContainer.textContent = `You scored ${score} out of ${quizData.length}`;
+        localStorage.setItem('quizScore', score);
     });
 
     const resetButton = document.getElementById('reset-quiz');
@@ -268,5 +269,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         const resultsContainer = document.getElementById('results');
         resultsContainer.textContent = '';
+        localStorage.removeItem('quizScore');
     });
+
+    // Load previous score if available
+    const previousScore = localStorage.getItem('quizScore');
+    if (previousScore) {
+        const resultsContainer = document.getElementById('results');
+        resultsContainer.textContent = `You scored ${previousScore} out of ${quizData.length}`;
+    }
 });
+
